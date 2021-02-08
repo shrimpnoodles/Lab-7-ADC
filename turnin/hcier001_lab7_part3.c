@@ -1,11 +1,13 @@
-/*	Author: lab
+/*	Author: Hannah Cierlak
  *  Partner(s) Name: none
  *	Lab Section:
- *	Assignment: Lab #  Exercise #
+ *	Assignment: Lab 7 Exercise 3
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
+ *
+ * 	submission link: https://drive.google.com/file/d/1pso79xI7jc5EidopVWo1Zm5pjyiZ5LPU/view?usp=sharing
  */
 #include <avr/io.h>
 #ifdef _SIMULATE_
@@ -29,10 +31,8 @@ int main(void) {
 	DDRD = 0XFF; PORTD = 0X00;
 
 	ADC_init();
-	unsigned char max= 2;
-
+	unsigned char max= 46;
 	unsigned short x = ADC;
-//	unsigned char my_char;
     /* Insert your solution below */
     while (1) {
 	    
