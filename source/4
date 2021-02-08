@@ -24,29 +24,32 @@ void ADC_init(){
 
 int main(void) {
     /* Insert DDR and PORT initializations */
-//	DDRA =0X00; PORTA = 0XFF;
+	DDRA =0X00; PORTA = 0XFF;
 	DDRB = 0XFF; PORTB = 0X00;
 	DDRD = 0XFF; PORTD = 0X00;
-
+	
+//	unsigned char max = 0x00;
+   
 	ADC_init();
-	unsigned char max= 2;
-
 	unsigned short x = ADC;
 //	unsigned char my_char;
     /* Insert your solution below */
     while (1) {
-	    
 	    x = ADC;
-	  
-	   /* PORTD = (char)(x>>8);
-	    PORTB= (char)x; */ 
-	  
-	    if(x >=(max/2)){
-		    PORTB = 0x01;
-		   }
-	    else{
-		    PORTB= 0X00;
-		  }
+//	    my_char = (char)(x>>8)
+//	if(x > max){
+//		max =x;
+//	}
+//	if(x >= max/2){
+	    PORTD = (char)(x>>8);
+	  //  my_char = (char)x;
+	   PORTB= (char)x;
+	 // PORTB = 0x01;
+//	}
+//	else{
+//		PORTB = 0x00;
+//	}
+
     }
     return 1;
 }
